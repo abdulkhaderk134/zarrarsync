@@ -1,0 +1,381 @@
+/* ===== HERO SECTION ===== */
+.hero {
+  background: #ffffff;
+  padding: 100px 80px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background grid */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ===== LEFT CONTENT ===== */
+.hero-content {
+  max-width: 520px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== BADGE ===== */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #2563eb;
+  margin-bottom: 22px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background: #2563eb;
+  border-radius: 50%;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ===== HEADING ===== */
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111827;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.highlight {
+  color: #2563eb;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  border-radius: 2px;
+}
+
+/* ===== PARAGRAPH ===== */
+.hero-content p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.75;
+  max-width: 460px;
+}
+
+/* ===== BUTTONS ===== */
+.hero-buttons {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.primary-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 13px 24px;
+  border-radius: 9px;
+  border: none;
+  background: #111827;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.primary-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.primary-btn:hover::after {
+  transform: translateX(100%);
+}
+
+.primary-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+}
+
+.primary-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.primary-btn:hover svg {
+  transform: translateX(3px);
+}
+
+.secondary-btn {
+  padding: 13px 24px;
+  border-radius: 9px;
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+/* ===== SOCIAL PROOF ===== */
+.hero-proof {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.proof-avatars {
+  display: flex;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  margin-left: -8px;
+}
+
+.proof-avatars .avatar:first-child {
+  margin-left: 0;
+}
+
+.proof-text {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 !important;
+}
+
+.proof-text strong {
+  color: #111827;
+}
+
+/* ===== RIGHT VISUAL ===== */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+/* ===== FLOATING STATS ===== */
+.floating-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.floating-stat.right {
+  align-self: flex-end;
+}
+
+.stat-icon {
+  font-size: 20px;
+}
+
+.stat-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* ===== GLASS CARDS ===== */
+.glass-card {
+  width: 280px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: var(--card-bg, #f3f4f6);
+  border: 1px solid var(--card-border, #e5e7eb);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.glass-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-text h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 3px 0;
+}
+
+.card-text p {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 !important;
+}
+
+.card-arrow {
+  font-size: 16px;
+  color: #9ca3af;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.glass-card:hover .card-arrow {
+  transform: translateX(4px);
+  color: #2563eb;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 40px;
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .glass-card {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 60px 20px 80px;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-badge {
+    margin: 0 auto 22px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-content p {
+    margin: 16px auto 0;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-proof {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    align-items: center;
+    width: 100%;
+  }
+
+  .glass-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .floating-stat {
+    align-self: center;
+  }
+
+  .floating-stat.right {
+    align-self: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero {
+    padding: 50px 16px 60px;
+  }
+}

@@ -1,0 +1,147 @@
+/* ===== WRAP ===== */
+.wa-wrap {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 9999;
+}
+
+/* ===== TOOLTIP ===== */
+.wa-tooltip {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  max-width: 200px;
+  position: relative;
+  animation: fadeSlideUp 0.4s ease;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.wa-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  right: 22px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  transform: rotate(45deg);
+}
+
+.wa-tooltip p {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 3px;
+  padding-right: 16px;
+}
+
+.wa-tooltip span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.wa-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 11px;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.wa-close:hover {
+  color: #374151;
+}
+
+/* ===== BUTTON ===== */
+.wa-btn {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+  transition: all 0.2s ease;
+  animation: popIn 0.4s ease;
+  text-decoration: none;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.wa-btn:hover {
+  background: #20ba5a;
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+}
+
+.wa-btn svg {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== PULSE RING ===== */
+.wa-btn::before {
+  content: '';
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.3);
+  animation: ring 2s ease infinite;
+  z-index: 0;
+}
+
+@keyframes ring {
+  0%   { transform: scale(1);   opacity: 0.6; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .wa-wrap {
+    bottom: 18px;
+    right: 18px;
+  }
+
+  .wa-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .wa-btn svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .wa-btn::before {
+    width: 50px;
+    height: 50px;
+  }
+}

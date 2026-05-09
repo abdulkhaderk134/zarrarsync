@@ -1,0 +1,49 @@
+/* ===== DESIGN SYSTEM ===== */
+:root {
+  --navy: #0D1321;
+  --teal: #00C2A8;
+  --ivory: #F0EEE8;
+  --green: #22C55E;
+
+  --text-dark: #0D1321;
+  --text-light: #ffffff;
+  --text-muted: #6B7280;
+}
+
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--navy);
+  color: var(--text-light);
+  padding-top: 70px;
+}
+
+/* ===== GLOBAL ===== */
+section {
+  position: relative;
+}
+
+.app {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== TEXT ===== */
+::selection {
+  background: var(--teal);
+  color: black;
+}
