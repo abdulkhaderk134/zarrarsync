@@ -40,9 +40,11 @@ const Navbar = () => {
     <>
       {/* Announcement Bar */}
       <div className="announcement-bar">
-        <span className="ann-badge">New</span>
-        ZarrarSync v2.0 is live — faster builds, smarter sync.
-        <span className="ann-link">See what's new →</span>
+        <span className="ann-badge">Free</span>
+        Get a free website mockup before you pay anything.
+        <span className="ann-link" onClick={() => scrollTo("contact")}>
+          Claim yours →
+        </span>
       </div>
 
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -74,10 +76,12 @@ const Navbar = () => {
         <div className="nav-right">
           <div className="status-pill">
             <span className="status-dot" />
-            All systems up
+            Available for projects
           </div>
           <div className="nav-divider" />
-          <button className="btn-ghost">Log in</button>
+          <button className="btn-ghost" onClick={() => scrollTo("contact")}>
+            Free Mockup
+          </button>
           <button className="btn-cta" onClick={() => scrollTo("contact")}>
             Get Started
             <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +120,7 @@ const Navbar = () => {
               ))}
               <div className="mobile-menu-divider" />
               <p className="mobile-cta" onClick={() => scrollTo("contact")}>
-                Get Started →
+                Get Free Mockup →
               </p>
             </motion.div>
           )}

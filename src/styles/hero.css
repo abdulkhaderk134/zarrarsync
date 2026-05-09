@@ -379,3 +379,65 @@
     padding: 50px 16px 60px;
   }
 }
+
+/* ===== TRUST ROW ===== */
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.trust-icon {
+  font-size: 14px;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 14px;
+  background: #e5e7eb;
+}
+
+/* override secondary btn to work as anchor */
+.secondary-btn {
+  padding: 13px 24px;
+  border-radius: 9px;
+  border: 1px solid #e5e7eb;
+  background: transparent;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.secondary-btn:hover {
+  border-color: #25d366;
+  color: #16a34a;
+  background: #f0fdf4;
+}
+
+@media (max-width: 768px) {
+  .hero-trust {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .trust-divider {
+    display: none;
+  }
+}
