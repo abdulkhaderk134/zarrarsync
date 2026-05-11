@@ -27,6 +27,11 @@
   text-decoration: underline;
   text-underline-offset: 2px;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.ann-link:hover {
+  color: #ffffff;
 }
 
 /* ===== NAVBAR BASE ===== */
@@ -60,7 +65,6 @@
   gap: 10px;
   cursor: pointer;
   flex-shrink: 0;
-  text-decoration: none;
 }
 
 .logo-img {
@@ -129,19 +133,6 @@
   color: #2563eb;
   background: #eff6ff;
   font-weight: 600;
-}
-
-/* ===== NEW BADGE ===== */
-.new-badge {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  background: linear-gradient(135deg, #f59e0b, #ef4444);
-  color: white;
-  padding: 2px 5px;
-  border-radius: 4px;
-  line-height: 1.4;
 }
 
 /* ===== NAV RIGHT ===== */
@@ -279,9 +270,11 @@
 .hamburger.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -412,7 +405,7 @@
   }
 }
 
-
+/* ===== GLOBAL RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -422,6 +415,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: #ffffff;
 }
 
 #root {

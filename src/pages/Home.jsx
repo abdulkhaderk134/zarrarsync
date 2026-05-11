@@ -1,8 +1,9 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
-import Solutions from "../components/Solutions";
-import Pricing from "../components/Pricing";
+import Work from "../components/Work";
+import HowItWorks from "../components/HowItWorks";
+import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
@@ -13,8 +14,9 @@ const Home = () => {
       <Hero />
       {/* Next sections will come here */}
       <Services />
-      <Solutions />
-      <Pricing />
+      <Work />
+      <HowItWorks />
+      <About />
       <Contact />
       <Footer />
       <WhatsAppButton />

@@ -8,7 +8,7 @@ const Navbar = () => {
   const [active, setActive] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
-  const sections = ["home", "services", "solutions", "pricing", "contact"];
+  const sections = ["home", "services", "work", "how-it-works", "about", "contact"];
 
   const scrollTo = (id) => {
     const section = document.getElementById(id);
@@ -66,8 +66,7 @@ const Navbar = () => {
               className={active === item ? "active" : ""}
               onClick={() => scrollTo(item)}
             >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-              {item === "pricing" && <span className="new-badge">New</span>}
+              {item === "how-it-works" ? "How It Works" : item.charAt(0).toUpperCase() + item.slice(1)}
             </li>
           ))}
         </ul>
@@ -114,8 +113,7 @@ const Navbar = () => {
                   className={active === item ? "active" : ""}
                   onClick={() => scrollTo(item)}
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                  {item === "pricing" && <span className="new-badge">New</span>}
+                  {item === "how-it-works" ? "How It Works" : item.charAt(0).toUpperCase() + item.slice(1)}
                 </p>
               ))}
               <div className="mobile-menu-divider" />

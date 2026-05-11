@@ -1,0 +1,384 @@
+/* ===== SECTION ===== */
+.hiw-section {
+  background: #ffffff;
+  padding: 96px 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hiw-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ===== HEADER ===== */
+.hiw-header {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.hiw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid #bfdbfe;
+  margin-bottom: 20px;
+}
+
+.hiw-badge .badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563eb;
+  display: inline-block;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hiw-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 0 0 14px;
+}
+
+.hiw-title .title-accent {
+  color: #2563eb;
+  position: relative;
+  display: inline-block;
+}
+
+.hiw-title .title-accent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  border-radius: 2px;
+}
+
+.hiw-sub {
+  font-size: 15.5px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== GRID ===== */
+.hiw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== CARD ===== */
+.hiw-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px 24px;
+  position: relative;
+  transition: all 0.28s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.hiw-card:hover {
+  border-color: var(--step-border);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== NUMBER ===== */
+.hiw-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #f1f5f9;
+  line-height: 1;
+  margin-bottom: 16px;
+  letter-spacing: -2px;
+  transition: color 0.28s ease;
+}
+
+.hiw-card:hover .hiw-number {
+  color: var(--step-bg);
+}
+
+/* ===== ICON ===== */
+.hiw-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--step-bg);
+  border: 1px solid var(--step-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  transition: transform 0.25s ease;
+}
+
+.hiw-card:hover .hiw-icon-wrap {
+  transform: scale(1.08);
+}
+
+.hiw-icon {
+  font-size: 22px;
+}
+
+/* ===== TAG ===== */
+.hiw-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--step-bg);
+  color: var(--step-accent);
+  border: 1px solid var(--step-border);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+/* ===== TEXT ===== */
+.hiw-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 10px;
+  letter-spacing: -0.2px;
+}
+
+.hiw-card-desc {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+/* ===== CONNECTOR ===== */
+.hiw-connector {
+  position: absolute;
+  top: 40px;
+  right: -16px;
+  font-size: 20px;
+  color: #cbd5e1;
+  z-index: 2;
+  font-weight: 300;
+}
+
+/* ===== GUARANTEE STRIP ===== */
+.hiw-guarantee {
+  margin-top: 56px;
+  background: #0f172a;
+  border-radius: 20px;
+  padding: 36px 48px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.guarantee-items {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.guarantee-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.guarantee-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 2px;
+}
+
+.guarantee-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.guarantee-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+/* ===== GUARANTEE CTA BTN ===== */
+.hiw-cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 9px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hiw-cta-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.12) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.hiw-cta-btn:hover::after {
+  transform: translateX(100%);
+}
+
+.hiw-cta-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+}
+
+.hiw-cta-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.hiw-cta-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hiw-section {
+    padding: 80px 40px;
+  }
+
+  .hiw-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hiw-connector {
+    display: none;
+  }
+
+  .hiw-guarantee {
+    padding: 28px 32px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hiw-section {
+    padding: 64px 20px;
+  }
+
+  .hiw-title {
+    font-size: 28px;
+    letter-spacing: -0.3px;
+  }
+
+  .hiw-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .hiw-card {
+    padding: 22px;
+  }
+
+  .hiw-number {
+    font-size: 36px;
+  }
+
+  .hiw-guarantee {
+    flex-direction: column;
+    padding: 24px 20px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .guarantee-items {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .guarantee-divider {
+    display: none;
+  }
+
+  .hiw-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .hiw-section {
+    padding: 50px 14px;
+  }
+
+  .hiw-title {
+    font-size: 24px;
+  }
+}
