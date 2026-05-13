@@ -25,13 +25,13 @@ const Hero = () => {
         {/* Top badge */}
         <div className="hero-badge">
           <span className="badge-dot" />
-          Hyderabad-based Web Agency
+          Hyderabad-based
         </div>
 
         <h1>
-          Your Business Deserves <br />
-          a <span className="highlight">Powerful Website</span>
-        </h1>
+  Your Business <br />
+  Deserves <span className="highlight">Better.</span>
+</h1>
 
         <p>
           We build professional websites, sales systems, and digital platforms
@@ -64,7 +64,7 @@ const Hero = () => {
           <div className="trust-divider" />
           <div className="trust-item">
             <span className="trust-icon">💰</span>
-            <span>Starting ₹1,999</span>
+            <span>Starting ₹4,999</span>
           </div>
         </div>
       </motion.div>

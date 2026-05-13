@@ -144,7 +144,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="about-skills-wrap">
+          {/* <div className="about-skills-wrap">
             <h4 className="skills-label">Technical Skills</h4>
             <div className="about-skills">
               {skills.map((skill, i) => (
@@ -154,7 +154,7 @@ const About = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="about-vision">
             <h4 className="vision-label">Future Vision</h4>

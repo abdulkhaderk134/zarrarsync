@@ -54,7 +54,7 @@ const Navbar = () => {
           <img src={logo} alt="ZarrarSync Logo" className="logo-img" />
           <div className="brand-text">
             <span className="brand-name">ZarrarSync</span>
-            <span className="brand-tagline">Think. Build. Grow.</span>
+            <span className="brand-tagline">Your Business Deserves Better</span>
           </div>
         </div>
 
